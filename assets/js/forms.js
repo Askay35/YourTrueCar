@@ -82,6 +82,33 @@ function getSaleStatusQuery(){
     return ""
 }
 
+function getFuelsQuery(){
+    let ss = document.getElementsByClassName('result-fuel')
+    let ss_q = checkboxArrayToQuery(ss)
+    if(ss_q.length > 0){
+        return "sale_status=" + ss_q
+    }
+    return ""
+}
+
+function getOsnQuery(){
+    let ss = document.getElementsByClassName('result-osn')
+    let ss_q = checkboxArrayToQuery(ss)
+    if(ss_q.length > 0){
+        return "sale_status=" + ss_q
+    }
+    return ""
+}
+
+function getVtorQuery(){
+    let ss = document.getElementsByClassName('result-vtor')
+    let ss_q = checkboxArrayToQuery(ss)
+    if(ss_q.length > 0){
+        return "sale_status=" + ss_q
+    }
+    return ""
+}
+
 let dv_min = document.getElementById('input-0')
 let dv_max = document.getElementById('input-1')
 
@@ -90,10 +117,6 @@ let probeg_max = document.getElementById('input-3')
 
 let god_min = document.getElementById('input-4')
 let god_max = document.getElementById('input-5')
-
-
-let fuel = document.getElementById('fuel')
-
 
 
 result_submit.onclick = ()=>{
@@ -132,6 +155,21 @@ result_submit.onclick = ()=>{
         new_url+=sale_statuses+'&'
     }
 
+    let fuels = getFuelsQuery()
+    if(fuels.length>0){
+        new_url+=fuels+'&'
+    }
+
+    let osn = getOsnQuery()
+    if(osn.length>0){
+        new_url+=osn+'&'
+    }
+
+    let vtor = getVtorQuery()
+    if(vtor.length>0){
+        new_url+=vtor+'&'
+    }
+
 
     new_url += 'min_year=' + god_min.value + '&'
     new_url += 'max_year=' + god_max.value + '&'
@@ -142,9 +180,6 @@ result_submit.onclick = ()=>{
     new_url += 'min_odometer=' + probeg_min.value + '&'
     new_url += 'max_odometer=' + probeg_max.value + '&'
 
-    if(fuel.checked){
-        new_url += 'fuel='+ fuel.value + '&'
-    }
 
 
     document.location = new_url + "limit=30"
