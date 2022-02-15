@@ -187,8 +187,13 @@
                                     <div class="result-auto__types-auction">
                                         <button class="result-auto__types-auction-btn" data-for="sale-status-radio" type="button">Тип продажу</button>
                                         <div class="result-auto__types-auction-radio" id="sale-status-radio">
-                                            <input class="result-auto__types-auction-input" type="checkbox" value="on+minimum+bid" id="sale-status">
-                                            <label class="result-auto__types-auction-label" for="sale-status">Минимальная ставка</label>
+                                            <input class="result-auto__types-auction-input result-ss" type="checkbox" value="on+approval" id="oa">
+                                            <label class="result-auto__types-auction-label" for="oa">По согласованию</label>
+                                            <input class="result-auto__types-auction-input result-ss" type="checkbox" value="on+minimum+bid" id="omb">
+                                            <label class="result-auto__types-auction-label" for="omb">Минимальная ставка</label>
+                                            <input class="result-auto__types-auction-input result-ss" type="checkbox" value="pure+sale" id="pure-sale">
+                                            <label class="result-auto__types-auction-label" for="pure-sale">Чистая продажа</label>
+                                            %2Cpure+sale
                                         </div>
                                     </div>
                                     <div class="result-auto__types-auction">
@@ -258,29 +263,37 @@
                                             <label class="result-auto__types-auction-label" for="gray">Серый</label>
                                             <input class="result-auto__types-auction-input result-color" type="checkbox" value="red" id="red">
                                             <label class="result-auto__types-auction-label" for="red">Красный</label>
-                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="silver" id="silver">
-                                            <label class="result-auto__types-auction-label" for="silver">Серебро</label>
-                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="white" id="white">
-                                            <label class="result-auto__types-auction-label" for="white">Белый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="beige" id="beige">
+                                            <label class="result-auto__types-auction-label" for="beige">Бежевый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="blue" id="blue">
+                                            <label class="result-auto__types-auction-label" for="blue">Голубой</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="brown" id="brown">
+                                            <label class="result-auto__types-auction-label" for="brown">Коричневый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="gold" id="gold">
+                                            <label class="result-auto__types-auction-label" for="gold">Золото</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="green" id="green">
+                                            <label class="result-auto__types-auction-label" for="green">Зеленый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="orange" id="orange">
+                                            <label class="result-auto__types-auction-label" for="orange">Оранжевый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="other" id="other">
+                                            <label class="result-auto__types-auction-label" for="other">Другой</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="pink" id="pink">
+                                            <label class="result-auto__types-auction-label" for="pink">Розовый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="purple" id="purple">
+                                            <label class="result-auto__types-auction-label" for="purple">Фиолетовый</label>
+                                            <input class="result-auto__types-auction-input result-color" type="checkbox" value="yellow" id="yellow">
+                                            <label class="result-auto__types-auction-label" for="yellow">Желтый</label>
                                         </div>
                                     </div>
-                                    <div class="dropdown">
-                                        <button class="dropdown__button" type="button">Дата продажу</button>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__list-item" data-value="travel">Дата продажу</li>
-                                            <li class="dropdown__list-item" data-value="lessons">Porshe</li>
-                                            <li class="dropdown__list-item" data-value="photo">Ferrari</li>
-                                            <li class="dropdown__list-item" data-value="sport">Ford</li>
-                                        </ul>
-                                        <input type="text" name="select-category" value=""
-                                               class="dropdown__input-hidden">
-                                    </div>
-
                                     <div class="result-auto__types-auction">
                                         <button class="result-auto__types-auction-btn" data-for="fuel-radio" type="button">Паливо</button>
                                         <div class="result-auto__types-auction-radio" id="fuel-radio">
-                                            <input class="result-auto__types-auction-input" type="checkbox" value="electric" id="fuel">
-                                            <label class="result-auto__types-auction-label" for="fuel">Электро</label>
+                                            <input class="result-auto__types-auction-input" type="checkbox" value="electric" id="electric">
+                                            <label class="result-auto__types-auction-label" for="electric">Электро</label>
+                                            <input class="result-auto__types-auction-input" type="checkbox" value="electric" id="electric">
+                                            <label class="result-auto__types-auction-label" for="electric">Электро</label>
+                                            <input class="result-auto__types-auction-input" type="checkbox" value="electric" id="electric">
+                                            <label class="result-auto__types-auction-label" for="electric">Электро</label>
                                         </div>
                                     </div>
                                     <div class="result-auto__types-auction">
@@ -292,7 +305,6 @@
                                             <label class="result-auto__types-auction-label" for="run-drive">Заводится и едет</label>
                                             <input class="result-auto__types-auction-input result-status" type="checkbox" value="vehicle+starts" id="vehicle-starts">
                                             <label class="result-auto__types-auction-label" for="vehicle-starts">Заводится</label>
-
                                         </div>
                                     </div>
                                     <div class="dropdown">

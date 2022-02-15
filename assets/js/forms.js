@@ -73,6 +73,14 @@ function getTransmissionQuery(){
     return ""
 }
 
+function getSaleStatusQuery(){
+    let ss = document.getElementsByClassName('result-ss')
+    let ss_q = checkboxArrayToQuery(ss)
+    if(ss_q.length > 0){
+        return "sale_status=" + ss_q
+    }
+    return ""
+}
 
 let dv_min = document.getElementById('input-0')
 let dv_max = document.getElementById('input-1')
@@ -83,7 +91,6 @@ let probeg_max = document.getElementById('input-3')
 let god_min = document.getElementById('input-4')
 let god_max = document.getElementById('input-5')
 
-let sale_status = document.getElementById('sale-status')
 
 let fuel = document.getElementById('fuel')
 
@@ -120,7 +127,10 @@ result_submit.onclick = ()=>{
     if(transmissions.length>0){
         new_url+=transmissions+'&'
     }
-
+    let sale_statuses = getSaleStatusQuery()
+    if(sale_statuses.length>0){
+        new_url+=sale_statuses+'&'
+    }
 
 
     new_url += 'min_year=' + god_min.value + '&'
@@ -132,9 +142,6 @@ result_submit.onclick = ()=>{
     new_url += 'min_odometer=' + probeg_min.value + '&'
     new_url += 'max_odometer=' + probeg_max.value + '&'
 
-    if(sale_status.checked){
-        new_url += 'sale_status='+ sale_status.value + '&'
-    }
     if(fuel.checked){
         new_url += 'fuel='+ fuel.value + '&'
     }
