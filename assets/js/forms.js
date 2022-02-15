@@ -86,7 +86,7 @@ function getFuelsQuery(){
     let ss = document.getElementsByClassName('result-fuel')
     let ss_q = checkboxArrayToQuery(ss)
     if(ss_q.length > 0){
-        return "sale_status=" + ss_q
+        return "fuel=" + ss_q
     }
     return ""
 }
@@ -95,7 +95,7 @@ function getOsnQuery(){
     let ss = document.getElementsByClassName('result-osn')
     let ss_q = checkboxArrayToQuery(ss)
     if(ss_q.length > 0){
-        return "sale_status=" + ss_q
+        return "damage=" + ss_q
     }
     return ""
 }
@@ -104,7 +104,7 @@ function getVtorQuery(){
     let ss = document.getElementsByClassName('result-vtor')
     let ss_q = checkboxArrayToQuery(ss)
     if(ss_q.length > 0){
-        return "sale_status=" + ss_q
+        return "damage2=" + ss_q
     }
     return ""
 }
